@@ -1,5 +1,3 @@
-# Project Description
-A built version of the project is available on GitHub Pages at [this link](https://armandok0.github.io/FrontEndSimpleTaskAngular/).
 ## Overview
 This project is a front-end application developed using Angular framework, leveraging TypeScript. It consists of three main components: Users, Products, and Customers, each serving specific functionalities as outlined in the provided specifications.
 
