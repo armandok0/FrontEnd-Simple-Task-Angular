@@ -1,0 +1,27 @@
+<div class="top-menu">
+  <button id="deleteButton" (click)="deleteSelectedProducts()">Delete</button>
+</div>
+<div class="content">
+  <table id="Table">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Code</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let product of products"
+        [class.selected]="product.selected"
+        (click)="toggleSelection(product)"
+      >
+        <td>
+          <input type="checkbox" [checked]="product.selected" />
+        </td>
+        <td>{{ product.code }}</td>
+        <td>{{ product.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

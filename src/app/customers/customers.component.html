@@ -1,0 +1,18 @@
+<div class="content">
+  <table id="Table">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.code }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.address }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

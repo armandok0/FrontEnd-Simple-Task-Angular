@@ -1,0 +1,29 @@
+<div class="top-menu">
+  <img
+    class="backbtn"
+    src="/assets/images/arrow-left.svg"
+    alt="Go Back"
+    (click)="goBack()"
+  />
+  <button id="createButton" (click)="addUser()">Create</button>
+  <h2>Add New User</h2>
+</div>
+
+<div class="form-container">
+  <label for="nameInput">Name:</label>
+  <input
+    type="text"
+    id="nameInput"
+    placeholder="Enter name"
+    class="input-style"
+    [(ngModel)]="newUser.name"
+  />
+  <label for="codeInput">Code:</label>
+  <input
+    type="text"
+    id="codeInput"
+    placeholder="Enter code"
+    class="input-style"
+    [(ngModel)]="newUser.code"
+  />
+</div>

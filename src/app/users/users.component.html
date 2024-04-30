@@ -1,0 +1,19 @@
+<div class="top-menu">
+  <button id="addButton" (click)="redirectToCreateUser()">Add User</button>
+</div>
+<div class="content">
+  <table id="Table">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.code }}</td>
+        <td>{{ user.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

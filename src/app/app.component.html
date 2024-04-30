@@ -1,0 +1,66 @@
+<!-- Loader -->
+<div class="loader-wrapper" *ngIf="loaderVisible">
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Side Menu -->
+<div class="menu-wrapper" *ngIf="menuVisible">
+  <div class="side-menu">
+    <img
+      class="logo"
+      src="/assets/images/logo.svg"
+      alt="Pocuca Logo"
+      (click)="removeSelected()"
+      [routerLink]="[ROUTER_TOKENS.LOGO]"
+    />
+    <ul>
+      <li
+        (click)="selectColor('customers')"
+        [routerLink]="[ROUTER_TOKENS.CUSTOMERS]"
+        [class.selected]="selectedMenuItem === 'customers'"
+      >
+        <h3>CUSTOMERS</h3>
+      </li>
+      <li
+        (click)="selectColor('products')"
+        [routerLink]="[ROUTER_TOKENS.PRODUCTS]"
+        [class.selected]="selectedMenuItem === 'products'"
+      >
+        <h3>PRODUCTS</h3>
+      </li>
+      <li
+        (click)="selectColor('users')"
+        [routerLink]="[ROUTER_TOKENS.USERS]"
+        [class.selected]="selectedMenuItem === 'users'"
+      >
+        <h3>USERS</h3>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Top Menu -->
+  <div class="top-menu">
+    <h2 *ngIf="!selectedMenuItem" >Welcome</h2>
+    <h2 *ngIf="selectedMenuItem === 'users'">Users</h2>
+    <h2 *ngIf="selectedMenuItem === 'products'">Products</h2>
+    <h2 *ngIf="selectedMenuItem === 'customers'">Customers</h2>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="content" *ngIf="contentVisible">
+  <table id="Table">
+    <tbody id="displayBody">
+      <router-outlet></router-outlet>
+    </tbody>
+  </table>
+</div>
